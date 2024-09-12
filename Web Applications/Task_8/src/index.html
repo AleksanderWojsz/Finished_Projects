@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>aww8</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+
+    <form id="put_coordinates">
+        <label for="x1">x1: </label>
+        <input type="number" id="x1" value="0">
+        <label for="y1">y1: </label>
+        <input type="number" id="y1" value="0"><br>
+        <label for="x2">x2: </label>
+        <input type="number" id="x2" value="100">
+        <label for="y2">y2: </label>
+        <input type="number" id="y2" value="100"><br>
+
+        <input type="color" id="pick_color" name="pick_color" value="#e66465" />
+        <script>
+            function generateRandomColor() {
+                // https://stackoverflow.com/a/5365036/22553511
+                document.getElementById('pick_color').value = "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0");
+            }
+            setInterval(generateRandomColor, 5000);
+        </script>
+
+        <button type="button" onclick="addRectangle()">Dodaj</button>
+    </form>
+
+
+
+    <svg id="space_to_render_image" width="600" height="600" style="border: 1px solid black;"
+        onmousemove="onMouseMove(event)"
+        onmouseup="onMouseUp(event)"
+        onmousedown="onMouseDown(event)"
+    >
+    </svg>
+
+    <form id="put_coordinates_del">
+        <label for="x1_del">x1: </label>
+        <input type="number" id="x1_del">
+        <label for="y1_del">y1: </label>
+        <input type="number" id="y1_del"><br>
+        <label for="x2_del">x2: </label>
+        <input type="number" id="x2_del">
+        <label for="y2_del">y2: </label>
+        <input type="number" id="y2_del"><br>
+        <input type="color" id="color_del"/>
+        <button type="button" onclick="deleteSelectedRectangle()">Usuń</button>
+    </form>
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>

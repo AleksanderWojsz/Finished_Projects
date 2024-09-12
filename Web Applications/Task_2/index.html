@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <header>
+        <h1>Najczęściej Odwiedzane Zabytki Świata</h1>
+    </header>
+
+    <article>
+        Wiele zabytków znajduje się w naszym kraju, jak i poza jego granicami. Zapewne w ciągu naszego życia nie starczy czasu na poznanie ich wszystkich. Natomiast moglibyśmy wyznaczyć sobie cel poznawania wielu wspaniałych miejsc, w Polsce, Europie oraz na innych kontynentach.
+        Poznaj zabytki, które przyciągają miliony turystów każdego roku.
+    </article>
+
+    <table border="1">
+        <caption>Najczęściej odwiedzane zabytki</caption>
+        <tr>
+            <th>Pozycja</th>
+            <th>Nazwa</th>
+            <th>Lokalizacja</th>
+            <th>Liczba Odwiedzających</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Forbidden City</td>
+            <td>Beijing, Chiny</td>
+            <td>17,000,000+</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>St. Peter’s Basilica</td>
+            <td>Vatican City</td>
+            <td>11,000,000</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Palace of Versailles</td>
+            <td>Versailles, Francja</td>
+            <td>8,100,000</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Lincoln Memorial</td>
+            <td>Washington, D.C., USA</td>
+            <td>7,804,683</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Colosseum-Forum-Palatine Hill Circuit</td>
+            <td>Rzym, Włochy</td>
+            <td>7,650,519</td>
+        </tr>
+    </table>
+
+    <img src="https://www.worldatlas.com/r/w1200/upload/55/b6/5b/shutterstock-721309024.jpg" alt="Zdjęcie Eiffel Tower">
+
+    <h2>Moje Ulubione Zabytki</h2>
+    <ol type="i">
+        <li>Colosseum - jest w <strong>Rzymie</strong> i ładnie wygląda.</li>
+        <li>Eiffel Tower - symbol <em>Paryża</em> i Francji.</li>
+        <li>Taj Mahal - jest na liście <strong>Unesco</strong></li>
+        <li>Pałac Kultury i Nauki - jest blisko</li>
+    </ol>
+
+    <label for="pasek">Ile procent krajów już odwiedziłem</label>
+    <progress id="pasek" value="10" max="100"> 10% </progress>
+
+    <details>
+        <summary>Które kraje już odwiedziłem?</summary>
+        <p>Polska, Niemcy, Litwa, Słowacja, Czechy, Francja, Chiny, Kolumbia, Indonezja</p>
+    </details>
+
+
+    <h3>Poczytaj trochę o każdym z kontynentów (poza Antarktydą)</h3>
+    <img src="https://www.worldatlas.com/r/w960-q80/upload/28/81/2b/shutterstock-2202598989.jpg" alt="" usemap="#mapa">
+    <map name="mapa">
+        <area shape="rect" coords="29,24,361,341" title="Ameryka Północna" alt="Ameryka Północna" href="https://en.wikipedia.org/wiki/North_America" target="_blank">
+        <area shape="rect" coords="397,34,667,341" title="Europa" alt="Europa" href="https://pl.wikipedia.org/wiki/Europa" target="_blank">
+        <area shape="rect" coords="682,33,979,362" title="Azja" alt="Azja" href="https://pl.wikipedia.org/wiki/Azja" target="_blank">
+        <area shape="rect" coords="43,357,337,594" title="Ameryka Południowa" alt="Ameryka Południowa" href="https://en.wikipedia.org/wiki/South_America" target="_blank">
+        <area shape="rect" coords="382,367,652,585" title="Afryka" alt="Afryka" href="https://pl.wikipedia.org/wiki/Afryka" target="_blank">
+        <area shape="rect" coords="699,370,978,583" title="Australia" alt="Australia" href="https://pl.wikipedia.org/wiki/Australia" target="_blank">
+    </map>
+
+
+    <h3>Ankiety</h3>
+    <p>Jaki jest Twój ulubiony zabytek?</p>
+    <form action="dane.php">
+        <label for="nazwa">Nazwa:</label><br>
+        <input type="text" id="nazwa" name="nazwa"><br><br>
+        <label for="kraj">Kraj:</label><br>
+        <input type="text" id="kraj" name="kraj"><br><br>
+        <input type="submit" value="Wyślij">
+    </form>
+
+    <form action="/dane.php">
+        <label for="kraje">Wybierz kraj, w którym chciałbyś zamieszkać na stałe:</label>
+        <select name="kraje" id="kraje">
+            <optgroup label="Europa">
+                <option value="polska">Polska</option>
+                <option value="francja">Francja</option>
+            </optgroup>
+            <optgroup label="Azja">
+                <option value="chiny">Chiny</option>
+                <option value="indie">Indie</option>
+            </optgroup>
+        </select>
+        <br><br>
+        <input type="submit" value="Wyślij">
+    </form>
+
+    <button type="button" onclick="alert('Polska')">Zobacz który kraj ja wybrałem</button>
+
+
+    <footer>
+        <h5>Autor: Aleksander Wojsz</h5>
+    </footer>
+
+</body>
+</html>

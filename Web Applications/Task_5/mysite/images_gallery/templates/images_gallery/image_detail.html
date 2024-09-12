@@ -1,0 +1,11 @@
+<a href="{% url 'images_list' %}">Powrót do listy</a>
+
+<h2>Obrazek {{ image.title }}:</h2>
+<svg width="{{ image.width }}" height="{{ image.height }}" viewBox="0 0 {{ image.width }} {{ image.height }}" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    {% for rectangle in image.rectangles.all %}
+    <rect x="{{ rectangle.x }}" y="{{ rectangle.y }}" width="{{ rectangle.width }}" height="{{ rectangle.height }}" fill="{{ rectangle.color }}"></rect>
+    {% endfor %}
+</svg>
+
+<h3>Wielkość: {{ image.width }}x{{ image.height }}</h3>
+

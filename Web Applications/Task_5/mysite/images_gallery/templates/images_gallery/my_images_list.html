@@ -1,0 +1,8 @@
+<a href="{% url 'images_list' %}">Powrót do listy</a>
+
+<h2>Twoje obrazki:</h2>
+<ul>
+    {% for image in images %}
+    <li><a href="{% url 'image_detail_editable' pk=image.pk %}">{{ image.title }}</a></li>
+    {% endfor%}
+</ul>

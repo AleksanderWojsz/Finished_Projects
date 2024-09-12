@@ -1,0 +1,44 @@
+<a href="{% url 'my_images' %}">Powrót do twoich obrazków</a>
+
+<h2>Obrazek {{ image.title }}:</h2>
+<svg width="{{ image.width }}" height="{{ image.height }}" viewBox="0 0 {{ image.width }} {{ image.height }}" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    {% for rectangle in image.rectangles.all %}
+    <rect x="{{ rectangle.x }}" y="{{ rectangle.y }}" width="{{ rectangle.width }}" height="{{ rectangle.height }}" fill="{{ rectangle.color }}"></rect>
+    {% endfor %}
+</svg>
+
+<h3>Wielkość: {{ image.width }}x{{ image.height }}</h3>
+
+<h3>Dodaj nowy prostokąt:</h3>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Dodaj</button>
+</form>
+
+<h3>Prostokąty:</h3>
+<table>
+    <tr>
+        <th>x</th>
+        <th>y</th>
+        <th>szerokość</th>
+        <th>wysokość</th>
+        <th>kolor</th>
+        <th>akcje</th>
+    </tr>
+    {% for rectangle in image.rectangles.all %}
+    <tr>
+        <td>{{ rectangle.x }}</td>
+        <td>{{ rectangle.y }}</td>
+        <td>{{ rectangle.width }}</td>
+        <td>{{ rectangle.height }}</td>
+        <td>{{ rectangle.color }}</td>
+        <td>
+            <form action="{% url 'rectangle_delete' pk=image.pk rectangle_pk=rectangle.pk %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Usuń</button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
