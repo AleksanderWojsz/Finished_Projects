@@ -1,8 +1,4 @@
-<div style="display: flex; flex-direction: row; align-items: center;">
-    <h2>Some projects I have done</h2>
-    <img src="imgs/cat.gif" alt="cat_gif" width="100" height="100">
-</div>
-
+<h2> Some projects I have done <img align="center" src="imgs/cat.gif" alt="cat_gif" width="100" height="100"></h2>
 
 
 | First year at university                                                                                                                                                            |                                                                                                                                                                 |
